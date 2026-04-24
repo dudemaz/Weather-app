@@ -1,0 +1,71 @@
+@import './variables.css';
+
+html,
+body {
+  height: 100dvh;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--app-padding);
+}
+
+#app {
+  width: 100%;
+  max-width: var(--app-max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-height: 100dvh;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.app-title {
+  margin: 0;
+}
+
+.search-section,
+.result-section,
+.history-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+#cityInput {
+  width: 100%;
+}
+
+#suggestions {
+  margin: 0;
+  padding-left: 18px;
+}
+
+button {
+  align-self: flex-start;
+}
+
+#result-from-api {
+  min-height: 1.2em;
+  height: 50px;
+}
+
+dialog#history {
+  width: min(560px, 92vw);
+}

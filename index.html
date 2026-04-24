@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather-app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <div id="app">
-        <select name="" id="Cities"></select>
-        <button id="find-city"></button>
-        <img src="" alt="">
-        <span id="result-from-api"></span>
-        <h2>🕘History</h2>
-        <button id="open-history"></button>
-        <dialog id="history">
-            <div id="historyblock"></div>
-          <button id="closeBtn">Закрыть</button>
-        </dialog>
-    </div>
+    <main id="app">
+        <header class="app-header">
+            <h1 class="app-title">Weather App</h1>
+        </header>
+
+        <section class="search-section" aria-labelledby="search-title">
+            <h2 id="search-title">Поиск города</h2>
+
+            <div class="search-box">
+                <label for="cityInput">Город</label>
+                <input
+                    id="cityInput"
+                    type="text"
+                    placeholder="Начни вводить город..."
+                    autocomplete="off"
+                >
+                <ul id="suggestions" aria-label="Подсказки городов"></ul>
+            </div>
+
+            <button id="find-city" type="button">Найти</button>
+        </section>
+
+        <section class="result-section" aria-labelledby="result-title">
+            <h2 id="result-title">Результат</h2>
+            <img id="weather-icon" src="" alt="">
+            <div id="result-from-api" aria-live="polite"></div>
+        </section>
+
+        <section class="history-section" aria-labelledby="history-title">
+            <h2 id="history-title">История</h2>
+            <button id="open-history" type="button">Открыть историю</button>
+
+            <dialog id="history" aria-labelledby="history-dialog-title">
+                <h3 id="history-dialog-title">История запросов</h3>
+                <div id="historyblock"></div>
+                <button id="closeBtn" type="button">Закрыть</button>
+            </dialog>
+        </section>
+    </main>
 </body>
 </html>

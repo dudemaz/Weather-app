@@ -1,8 +1,8 @@
 {
   "name": "weather-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "commonjs",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "prepare": "husky"
   },
