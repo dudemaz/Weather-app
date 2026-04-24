@@ -1,3 +1,23 @@
+// import { domEl } from "../ui/dom/domel";
+
+export async function GetCitylatlon(city) {
+  try {
+    const api_key = '';
+    const url = ``;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    if (data.length === 0) {
+      throw new Error('City not found');
+    }
+    console.log(data);
+    return { lat: data[0].lat, lon: data[0].lon };
+  } catch (error) {
+    throw new Error('error dosnt work funct');
+  }
+}
 export async function LoadWeatherData(lat, lon) {
   try {
     const API_KEY = '42f90f490fde6bd9aa84073cd6d3f5ee';
@@ -13,5 +33,5 @@ export async function LoadWeatherData(lat, lon) {
     throw new Error('Failed to get weather data: ' + error.message);
   }
 }
-console.log('Testing LoadWeatherData function with coordinates for Tokyo:');
-LoadWeatherData(35.6895, 139.6917);
+
+LoadWeatherData(GetCitylatlon('London').lat, GetCitylatlon('London').lon);

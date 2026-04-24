@@ -1,0 +1,6 @@
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 140px;
+}
