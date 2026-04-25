@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'CraftyGirls';
+  src: url('../assets/font/CraftyGirls-Regular.ttf') format('truetype');
+}
+
 :root {
   --app-max-width: 720px;
   --app-padding: 20px;
@@ -5,4 +10,5 @@
   --space-2: 12px;
   --space-3: 16px;
   --space-4: 24px;
+  --font: 'CraftyGirls', sans-serif;
 }

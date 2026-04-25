@@ -1,5 +1,5 @@
-// import { domEl } from "../ui/dom/domel";
-
+import { domEl } from '../ui/dom/domel';
+let city = domEl.searchInput.value;
 export async function GetCitylatlon(city) {
   try {
     const api_key = '';
