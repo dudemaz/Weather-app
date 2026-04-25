@@ -1,5 +1,5 @@
 export const domEl = {
-  searchInput: document.getElementById('search-input'),
+  searchInput: document.getElementById('cityInput'),
   searchButton: document.getElementById('search-button'),
   weatherContainer: document.getElementById('weather-container'),
   historyContainer: document.getElementById('history-container'),
