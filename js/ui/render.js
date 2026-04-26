@@ -1,5 +1,6 @@
 import { GetCitylatlon, LoadWeatherData } from '../api/api.js';
 import { domEl } from './dom/domel.js';
+import { refDataIcon } from './refDataIcons.js';
 
 export async function renderData() {
   let inputCity = domEl.searchInput.value;
@@ -15,4 +16,10 @@ export async function renderData() {
 
   container.appendChild(text);
   domEl.weatherContainer.appendChild(container);
+
+  for (const [key, path] of Object.entries(refDataIcon)) {
+    if (data.includes(key)) {
+      domEl.weatherIcon.setAttribute('src', path);
+    }
+  }
 }
