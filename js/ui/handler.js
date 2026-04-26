@@ -1,5 +1,5 @@
-import { domEl } from './dom/domel';
-
+import { domEl } from './dom/domel.js';
+import { renderData } from './render.js';
 export function bindUiHandlers() {
-  domEl.searchButton.addEventListener('click');
+  domEl.searchButton.addEventListener('click', renderData);
 }
